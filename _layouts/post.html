@@ -1,17 +1,16 @@
----
-layout: default
----
+--- layout: default ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} {{ page.date | date: date_format }}
       </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- if page.author -%} •
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+      </span>
       {%- endif -%}</p>
   </header>
 
@@ -19,9 +18,7 @@ layout: default
     {{ content }}
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%} {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
@@ -30,12 +27,13 @@ layout: default
   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
   <script>
     var gitment = new Gitment({
-        owner: 'xuweilu', //比如我的叫nilzzzz
-        repo: 'xuweilu.github.io', //比如我的叫nilzzzz.github.io
-        oauth: {
-            client_id: '0676a044b35718cbc897', //比如我的828***********
-            client_secret: '011a39e8e8f9b0807c4d7fa98898dc13e6b3ba82', //比如我的49e************************
-        },
+      id: '{{ page.title }}',
+      owner: 'xuweilu', //比如我的叫nilzzzz
+      repo: 'xuweilu.github.io', //比如我的叫nilzzzz.github.io
+      oauth: {
+        client_id: '0676a044b35718cbc897', //比如我的828***********
+        client_secret: '011a39e8e8f9b0807c4d7fa98898dc13e6b3ba82', //比如我的49e************************
+      },
     });
     gitment.render('comments');
   </script>
