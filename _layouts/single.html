@@ -58,6 +58,8 @@ layout: default
         {% endif %}
       </footer>
 
+      <div id="comments"></div>
+
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
@@ -66,6 +68,20 @@ layout: default
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
+
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+      var gitment = new Gitment({
+          owner: 'xuweilu',
+          repo: 'xuweilu.github.io',
+          oauth: {
+              client_id: '0676a044b35718cbc897',
+              client_secret: '',
+          },
+      });
+      gitment.render('comments');
+    </script>
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
