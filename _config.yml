@@ -102,7 +102,7 @@ analytics:
 author:
   name             : "知北游"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "一个文化爆炸的程序员"
+  bio              : "一个文艺的程序员"
   location         : "Shanghai"
   email            : "xuweiluwx@gmail.com"
   uri              :
@@ -125,9 +125,9 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "xuweiluwx"
   vine             :
-  weibo            :
+  weibo            : "xuweiluwx"
   xing             :
   zhihu            : "zhibeiyou"
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
