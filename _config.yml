@@ -101,7 +101,7 @@ analytics:
 # Site Author
 author:
   name             : "知北游"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "一个文化爆炸的程序员"
   location         : "Shanghai"
   email            : "xuweiluwx@gmail.com"
