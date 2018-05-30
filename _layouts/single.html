@@ -63,8 +63,6 @@ layout: default
         </div>
       </footer>
 
-      <div id="comments"></div>
-
       {% if page.share %}{% include social-share.html %}{% endif %}
 
       {% include post_pagination.html %}
@@ -74,21 +72,6 @@ layout: default
       {% include comments.html %}
     {% endif %}
 
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    <script>
-    var gitment = new Gitment({
-      id: '{{ page.date }}',
-      // title: '{{ page.title }}',
-      owner: 'xuweilu',
-      repo: 'xuweilu.github.io',
-      oauth: {
-        client_id: '0676a044b35718cbc897',
-        client_secret: '011a39e8e8f9b0807c4d7fa98898dc13e6b3ba82',
-      },
-    });
-      gitment.render('comments');
-    </script>
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
