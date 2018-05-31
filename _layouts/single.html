@@ -89,6 +89,16 @@ layout: default
     });
       gitment.render('comments');
     </script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <script>
+      window.testweixin = function(){
+        wx.miniProgram.navigateTo({url: '/page/index/index'})
+        wx.miniProgram.postMessage({ data: 'foo' });
+        wx.miniProgram.postMessage({ data: {foo: 'bar'} });
+        wx.miniProgram.getEnv(function(res) { console.log(res.miniprogram)})
+      };
+      wx.miniProgram.postMessage({ data: 'foo' });
+    </script>
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
