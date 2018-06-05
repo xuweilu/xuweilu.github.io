@@ -95,7 +95,7 @@ brew cu -a
 
 不得不说mac自带的终端太难用，没有自动补全，也没有着色，所以接下来是配置出一个更强大、更优雅的终端的教程，主要使用iTerm2 + Oh My Zsh + Powerline。这是我最后配置出的效果图：
 
-![img](https://pic3.zhimg.com/50/v2-2f8e6a297ae5b3b3f7daca80389752a3_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/1.jpeg)
 
 按F12自动出现一个下拉式的终端，有自动补全、着色还有各种酷炫的提示功能。
 
@@ -139,7 +139,7 @@ vim ~/.zshrc
 
 修改plugins这一行使之如图所示：
 
-![img](https://pic4.zhimg.com/50/v2-6f18abf3b9bd27333cdd2d59cc0538a8_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/2.jpg)
 
 然后运行以下命令以使其生效：
 
@@ -167,7 +167,7 @@ rm ~/.zcompdump
 2. 执行`./install.sh`指令安装所有Powerline字体。
 3. 安装完字体库之后，把iTerm 2的设置里的Profile中的Text 选项卡中里的Font设置成 Powerline的字体，也就是名称里带有for Powerline的字体：
 
-![img](https://raw.githubusercontent.com/fcamblor/oh-my-zsh-agnoster-fcamblor/master/iterm_set_font.png)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/3.png)
 
 #### 配色方案
 
@@ -189,15 +189,15 @@ rm ~/.zcompdump
 
 1. 勾选键盘，将F1、F2等键用作标准功能键：
 
-![img](https://pic4.zhimg.com/50/v2-f45577629fc1e8ba4e62ecb7b8858fe0_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/4.jpg)
 
 2. 把键盘-->快捷键-->显示Dashboard F12前面的勾去掉：
 
-![img](https://pic2.zhimg.com/50/v2-972892cb042a2408a67f887a35c09dc9_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/5.jpg)
 
 3. 在iTerm2设置里Keys-->HotKey里的东西都勾上：
 
-![img](https://pic3.zhimg.com/50/v2-fe6b266fddfd7f7d3d5f3a105ac182d6_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/6.jpg)
 
 #### 安装powerline[可选]
 
@@ -217,15 +217,14 @@ pip install powerline-status
  . /Users/william/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 
-![img](https://pic4.zhimg.com/50/v2-71917ac7e264dc568ae08e1294137abd_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/7.jpg)
 
 注意.后面有空格，并且要把/powerline/bindings/zsh/powerline.zsh前面的地址替换成你自己的安装地址，通过`pip show powerline-status`可以得到你的powerline安装信息，其中Location后的地址就是你的安装地址，比如我的：
 
-![img](https://pic2.zhimg.com/50/v2-deac13cee5b7ec6a764f4286d57e9afc_hd.jpg)
+![img]({{ site.url }}{{ site.baseurl }}/assets/images/macos-config/8.jpg)
 
 然后删掉.zcompdump文件再重启终端：
 
 ```shell
 rm ~/.zcompdump
 ```
-
